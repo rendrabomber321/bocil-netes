@@ -5,6 +5,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -136,6 +138,10 @@ main {
 main.show {
     opacity: 1;
     visibility: visible;
+}
+
+#main.locked > *:not(#countdownPage) {
+    display: none !important;
 }
 
 section {
@@ -502,7 +508,7 @@ section {
 
 <!-- COUNTDOWN -->
 
-<section class="countdown-section">
+<section class="countdown-section"id="countdownPage">
 
     <h2 class="section-title">
         Counting Down To Your Special Day
@@ -533,6 +539,8 @@ section {
     </div>
 
 </section>
+
+<div id="contentPage" style="display: none;">
 
 
 <!-- LOVE LETTER -->
@@ -774,17 +782,16 @@ function openEnvelope() {
 
     envelope.classList.add("open");
 
-    // Memulai musik setelah user klik amplop
     music.volume = 0.5;
-
-    music.play().catch(function(error) {
-        console.log("Musik tidak dapat diputar:", error);
-    });
+    music.play();
 
     setTimeout(() => {
 
         opening.classList.add("hide");
+
         main.classList.add("show");
+
+        main.classList.add("locked");
 
         setInterval(createHeart, 600);
 
@@ -797,11 +804,24 @@ function openEnvelope() {
 
 const birthday = new Date("July 26, 2026 00:00:00").getTime();
 
-setInterval(function() {
+const countdownTimer = setInterval(function() {
 
     const now = new Date().getTime();
 
     const distance = birthday - now;
+
+    if (distance <= 0) {
+
+        clearInterval(countdownTimer);
+
+        document.getElementById("countdownPage").style.display = "none";
+
+        document.getElementById("contentPage").style.display = "block";
+
+        document.getElementById("main").classList.remove("locked");
+
+        return;
+    }
 
     const days = Math.floor(
         distance / (1000 * 60 * 60 * 24)
