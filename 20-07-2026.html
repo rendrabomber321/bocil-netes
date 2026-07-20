@@ -1,0 +1,868 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>For Lathifa Syafa Nadhira ❤️</title><style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #12080c;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ================= OPENING ================= */
+
+.opening {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background:
+        radial-gradient(circle at center, #4b1c2d 0%, #16090e 60%, #080306 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.5s ease;
+}
+
+.opening.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.envelope-wrapper {
+    position: relative;
+    width: 320px;
+    height: 230px;
+    cursor: pointer;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.envelope {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 190px;
+    background: #8d304d;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.7);
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #a94462, #651b34);
+    clip-path: polygon(0 0, 50% 55%, 100% 0);
+    z-index: 3;
+    transition: 1.2s ease;
+    transform-origin: top;
+}
+
+.envelope.open::before {
+    transform: rotateX(180deg);
+}
+
+.envelope::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 100px solid #54172b;
+    z-index: 2;
+}
+
+.letter {
+    position: absolute;
+    z-index: 1;
+    width: 85%;
+    height: 150px;
+    left: 7.5%;
+    bottom: 25px;
+    background: #f9eee4;
+    color: #542536;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    transition: 1.5s ease;
+}
+
+.envelope.open .letter {
+    transform: translateY(-150px);
+    z-index: 4;
+}
+
+.letter h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+}
+
+.opening-text {
+    position: absolute;
+    top: 75%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.opening-text small {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    margin-top: 10px;
+    opacity: .7;
+    letter-spacing: 2px;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    opacity: 0;
+    visibility: hidden;
+    transition: 2s ease;
+}
+
+main.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 20px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(20,5,12,.4), rgba(20,5,12,.9)),
+        url("photo1.jpg") center/cover;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: .75;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 12vw, 125px);
+    line-height: .9;
+    font-weight: 500;
+}
+
+.hero h1 span {
+    display: block;
+    font-style: italic;
+    color: #e9a5b8;
+}
+
+.hero p {
+    margin-top: 35px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-section {
+    text-align: center;
+    background: #180a10;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.time-box {
+    width: 130px;
+    padding: 28px 15px;
+    border: 1px solid rgba(233,165,184,.35);
+    background: rgba(255,255,255,.04);
+    backdrop-filter: blur(15px);
+}
+
+.time-box span {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    color: #e9a5b8;
+}
+
+.time-box small {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+/* ================= LETTER ================= */
+
+.letter-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(18,8,12,.92), rgba(18,8,12,.92)),
+        url("photo2.jpg") center/cover;
+}
+
+.love-letter {
+    max-width: 750px;
+    padding: 60px 45px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(233,165,184,.25);
+    backdrop-filter: blur(15px);
+    line-height: 2;
+    text-align: center;
+}
+
+.love-letter h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    color: #e9a5b8;
+    margin-bottom: 30px;
+}
+
+.love-letter p {
+    font-size: 14px;
+    opacity: .85;
+}
+
+/* ================= SCRAPBOOK ================= */
+
+.scrapbook-section {
+    background:
+        radial-gradient(circle at center, #391525, #12080c 70%);
+    text-align: center;
+}
+
+.scrapbook {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    align-items: center;
+}
+
+.photo-card {
+    position: relative;
+    padding: 12px 12px 45px;
+    background: #f7eee5;
+    box-shadow: 0 15px 35px rgba(0,0,0,.5);
+    transform: rotate(-3deg);
+    transition: .5s ease;
+}
+
+.photo-card:nth-child(even) {
+    transform: rotate(4deg);
+}
+
+.photo-card:hover {
+    transform: rotate(0deg) scale(1.08);
+    z-index: 5;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.photo-card p {
+    color: #552536;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    margin-top: 10px;
+}
+
+.tape {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 75px;
+    height: 25px;
+    background: rgba(233,165,184,.7);
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline-section {
+    background: #12080c;
+    text-align: center;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    position: relative;
+    text-align: left;
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-left: 2px solid #e9a5b8;
+    background: rgba(255,255,255,.04);
+}
+
+.timeline-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: #e9a5b8;
+}
+
+.timeline-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: .75;
+}
+
+/* ================= FINAL ================= */
+
+.final-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(18,8,12,.55), rgba(18,8,12,.9)),
+        url("photo10.jpg") center/cover;
+}
+
+.final-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(60px, 12vw, 130px);
+    color: #e9a5b8;
+    font-weight: 500;
+}
+
+.final-content p {
+    max-width: 650px;
+    margin: 25px auto;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.signature {
+    margin-top: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* ================= HEARTS ================= */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    pointer-events: none;
+    animation: rise 7s linear forwards;
+    z-index: 20;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 600px) {
+
+    .envelope-wrapper {
+        width: 280px;
+    }
+
+    .envelope::after {
+        border-left-width: 140px;
+        border-right-width: 140px;
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+
+    .love-letter {
+        padding: 40px 25px;
+    }
+
+    .love-letter h2 {
+        font-size: 42px;
+    }
+
+    .photo-card img {
+        height: 300px;
+    }
+}
+
+</style></head><body>
+
+<audio id="bgMusic" loop>
+    <source src="fix-you.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ================= OPENING ================= --><div class="opening" id="opening"><div class="envelope-wrapper" onclick="openEnvelope()">
+
+    <div class="envelope" id="envelope">
+
+        <div class="letter">
+            <h2>For Lathifa ❤️</h2>
+            <p>With all my love...</p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="opening-text">
+    ga biasa romantis jadi monmaap kalo ga perfect
+    <small>Dibuka Gih</small>
+</div>
+
+</div><!-- ================= MAIN CONTENT ================= --><main id="main"><!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            A special day for a special person
+        </div>
+
+        <h1>
+            Happy
+            <span>23rd Birthday, My Love! ❤️</span>
+        </h1>
+
+        <p>
+            Lathifa Syafa Nadhira ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- COUNTDOWN -->
+
+<section class="countdown-section">
+
+    <h2 class="section-title">
+        Counting Down To Your Special Day
+    </h2>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span id="days">0</span>
+            <small>Days</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">0</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">0</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">0</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOVE LETTER -->
+
+<section class="letter-section">
+
+    <div class="love-letter">
+
+        <h2>My Dearest Lathifa</h2>
+
+        <p>
+            Selamat ulang tahun, sayangku.
+        </p>
+
+        <br>
+
+        <p>
+            Cieee yang udah netes 23 Tahun, semoga senantiasa diberikan 
+            keberkahan didalam idup, diberikan kesehatan, diiyakan segala wishnya
+	    sama Tuhan and then tentunya diberikan kesabaran yang ++ buat jalan kedepan sama aku.
+        </p>
+
+        <br>
+
+        <p>
+            Thanks a lot ya sayang uda dateng ke idupku, hehehe jadi ga flat lagi❤️
+            Terima kasih untuk tiap senyum, perhatian, tawa, dan semua
+            momen indah yang uda dilalui bareng.
+        </p>
+
+        <br>
+
+        <p>
+            I may not be the perfect man today, but every day I'll keep growing into the man you deserve.
+            I'll never stop trying to be someone who stays by your side, believes in you,
+            supports your dreams, and reminds you—through my words and actions—that you are loved more deeply than    	    words could ever express.
+        </p>
+
+        <br>
+
+        <p>
+            Semoga semua impianmu menjadi kenyataan.
+            Semoga setiap langkahmu dipenuhi kebahagiaan,
+            kesehatan, keberuntungan dan semoga proses nikah kita dilancarkan sampai hari h
+	    Oiyaa so sorry banget ya sayang kalo misal kamu baca ini
+	    kita lagi ldr hehe mohon maklum yaaa....
+        </p>
+
+        <br>
+
+        <p>
+            Cheers to Your 23rd Birthday!
+            Oiyaa semangatt yaa ntar kegiatan penuyumpahannyaa sayaang
+            maaf gabisa nganter/nemenin
+        </p>
+
+        <br>
+
+        <p>
+            I love you, more than words could ever explain. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SCRAPBOOK -->
+
+<section class="scrapbook-section">
+
+    <h2 class="section-title">
+        Our Little Memories
+    </h2>
+
+    <div class="scrapbook">
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo1.jpg">
+            <p>Our beginning ✨</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo2.jpg">
+            <p>A beautiful moment 🤍</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo3.jpg">
+            <p>With you ❤️</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo4.jpg">
+            <p>Our little story</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo5.jpg">
+            <p>Always a favorite memory</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo6.jpg">
+            <p>Just us 💕</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo7.jpg">
+            <p>Forever grateful</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo8.jpg">
+            <p>One of my favorites</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo9.jpg">
+            <p>More memories to come</p>
+        </div>
+
+        <div class="photo-card">
+            <div class="tape"></div>
+            <img src="photo10.jpg">
+            <p>Our forever story ♾️</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="timeline-section">
+
+    <h2 class="section-title">
+        Our Story
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>17 May 2026</h3>
+
+            <p>
+                The beginning of something beautiful.
+                d day kita jadian wkwk, cieee kalo inget kadang ketawa dewe ditodong sm bocil
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h3>Every Little Moment</h3>
+
+            <p>
+                makasih udah mau saling memahami satu sama lain
+                apapun jalannya didepan nanti bareng2 terus ya sayaang 
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h3>26 July 2026</h3>
+
+            <p>
+                kado 23 Tahunnya dilamar & nikah sesuai wishmu kan ya? wkwkwk
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h3>To Be Continued...</h3>
+
+            <p>
+                udaa dulu yaa bingung juga mau ngetik apa intinya
+                selamat ulang taun yang ke-23 sayaaang,
+		no matter what happens, I'll always be grateful that life gave me you. ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final-section">
+
+    <div class="final-content">
+
+        <h2>I Love You</h2>
+
+        <p>
+            Kalau aku diberi kesempatan untuk memilih kembali,
+            aku tetap akan memilihmu.
+        </p>
+
+        <p>
+            Selamat ulang tahun, Lathifa.
+            Semoga semua kebahagiaan selalu menemukan jalan menuju kamu.
+        </p>
+
+        <div class="signature">
+            With all my love,<br>
+            Your favorite person ❤️
+        </div>
+
+    </div>
+
+</section>
+
+</main><script>
+
+/* OPEN ENVELOPE */
+
+function openEnvelope() {
+
+    const envelope = document.getElementById("envelope");
+    const opening = document.getElementById("opening");
+    const main = document.getElementById("main");
+    const music = document.getElementById("bgMusic");
+
+    envelope.classList.add("open");
+
+    // Memulai musik setelah user klik amplop
+    music.volume = 0.5;
+
+    music.play().catch(function(error) {
+        console.log("Musik tidak dapat diputar:", error);
+    });
+
+    setTimeout(() => {
+
+        opening.classList.add("hide");
+        main.classList.add("show");
+
+        setInterval(createHeart, 600);
+
+    }, 1800);
+
+}
+
+
+/* COUNTDOWN */
+
+const birthday = new Date("July 26, 2026 00:00:00").getTime();
+
+setInterval(function() {
+
+    const now = new Date().getTime();
+
+    const distance = birthday - now;
+
+    const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000);
+
+
+/* FLOATING HEARTS */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const symbols = [
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💓",
+        "✨"
+    ];
+
+    heart.innerHTML =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (Math.random() * 3 + 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+
+}
+
+</script></body>
+</html>
